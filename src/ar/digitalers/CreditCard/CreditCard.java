@@ -33,18 +33,8 @@ public class CreditCard {
         return tarjetaID;
     }
 
-    public void setCodigo() {
-
-        ArrayList<String> code = new ArrayList<String>();
-
-        int max = 4;
-
-        for (int i = 0; i < max; i++) {
-            Integer nums = new RandomNum(1111, 9999).random();
-            code.add(nums.toString());
-        }
-
-        this.codigo = code.get(0) + " " + code.get(1) + " " + code.get(2) + " " + code.get(3);
+    public void setCodigo(String code) {
+        this.codigo = code;
     }
 
     public void setCuentabancariaID(UUID cuentabancariaID) {
