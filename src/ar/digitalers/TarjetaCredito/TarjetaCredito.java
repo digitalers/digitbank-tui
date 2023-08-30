@@ -1,4 +1,4 @@
-package ar.digitalers.CreditCard;
+package ar.digitalers.TarjetaCredito;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.UUID;
 
 import ar.digitalers.RandomNum.RandomNum;
 
-public class CreditCard {
+public class TarjetaCredito {
     private UUID cuentabancariaID;
     private String tarjetaID;
     private String codigo;
