@@ -1,7 +1,8 @@
+package cuenta;
 import java.util.Date;
 
 public class Cuenta {
-    
+
     private int id;
     private String numero;
     private String tipo;
