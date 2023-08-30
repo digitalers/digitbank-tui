@@ -1,4 +1,5 @@
-package entidades;
+package titular;
+
 
 public class Titular {
     private String dni;

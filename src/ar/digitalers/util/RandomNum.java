@@ -1,4 +1,4 @@
-package ar.digitalers.RandomNum;
+package util;
 
 public class RandomNum {
 

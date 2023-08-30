@@ -1,4 +1,6 @@
-package entidades;
+package cuenta;
+
+import titular.Titular;
 
 public class CuentaBancaria {
     private int numeroCuenta;
