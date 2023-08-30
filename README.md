@@ -1,3 +1,3 @@
 # DigitBank
 
-* Como cliente, quiero crear una tarjeta de crédito asociada a mi cuenta bancaria, con un número, un código de seguridad, una fecha de vencimiento y un límite de crédito.
+* Movimiento: Es la entidad que representa a una operación que afecta al saldo de una cuenta. Puede ser de distintos tipos: ingreso, egreso, transferencia, etc. Algunos atributos son: id, tipo, monto, fecha, hora, concepto, cuenta origen, cuenta destino, etc.
