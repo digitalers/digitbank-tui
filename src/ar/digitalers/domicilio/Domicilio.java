@@ -1,4 +1,4 @@
-package cliente;
+package domicilio;
 
 public class Domicilio {
 
