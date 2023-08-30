@@ -1,10 +1,7 @@
-package ar.digitalers.TarjetaCredito;
+package  tarjetaCredito;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.UUID;
-
-import ar.digitalers.RandomNum.RandomNum;
 
 public class TarjetaCredito {
     private UUID cuentabancariaID;
