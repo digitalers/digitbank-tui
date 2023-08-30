@@ -11,9 +11,6 @@ public class Cuenta {
     private Date fechaApertura;
     private Date fechaVencimiento;
 
-    public Cuenta() {
-    }
-
     public Cuenta(int id, String numero, String tipo, double saldo, String moneda, Date fechaApertura, Date fechaVencimiento) {
         this.id = id;
         this.numero = numero;
