@@ -1,7 +1,7 @@
 package servicios;
 
-import entidades.CuentaBancaria;
-import entidades.Titular;
+    import entidades.CuentaBancaria;
+    import entidades.Titular;
 
 import java.util.ArrayList;
 import java.util.List;

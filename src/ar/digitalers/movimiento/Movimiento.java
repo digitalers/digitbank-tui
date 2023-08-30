@@ -1,42 +1,62 @@
 package movimiento;
 
+import java.time.Instant;
 import java.util.Date;
 import java.util.UUID;
+
+import movimiento.Exceptions.Exceptions;
 
 /* id, tipo, monto, fecha, hora, concepto, cuenta origen, cuenta destino */
 public class Movimiento {
     
-    private long id;
-    private int tipo;
-    private int monto;
-    private String fecha;
-    private String hora;
+    private Long id;
+    private TipoCuenta tipo;
+    private float monto;
+    private Instant fecha;
+    private long calculated;
     private String concepto;
     private String cuenta_origen;
     private String cuenta_destino;
 
-    public Movimiento() {
+    public Movimiento() throws Exceptions {
+        throw new Exceptions("El movimiento no puede estar vacío");
+    }
 
+    public Movimiento(Long id, TipoCuenta tipo, int monto, Instant fecha, String concepto, String cuenta_origen, String cuenta_destino) {
+        this.id = id;
+        this.tipo = tipo;
+        this.monto = monto;
+        this.fecha = fecha;
+        this.calculated = Instant.now().getEpochSecond();
+        this.concepto = concepto;
+        this.cuenta_origen = cuenta_origen;
+        this.cuenta_destino = cuenta_destino;
     }
 
     public long getId() {
         return this.id;
     }
 
-    public int getTipo() {
+    public TipoCuenta getTipo() {
         return this.tipo;
     }
 
-    public int getMonto() {
+    public float getMonto() {
         return this.monto;
     }
 
-    public String getFecha() {
+    public Instant getFecha() {
         return this.fecha;
     }
 
-    public String getHora() {
-        return this.hora;
+    public void getHora() {
+
+        long days = (this.calculated / 86400);
+        long hours = ((this.calculated / 3600) % 24);
+        long minutes = ((this.calculated / 60) % 60);
+
+        System.out.println();
+        System.out.printf("El movimiento se hizo hace %d día(s), %d hora(s) y %d minuto(s)", days, hours, minutes);
     }
 
     public String getConcepto() {
@@ -55,7 +75,7 @@ public class Movimiento {
         this.id = id;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(TipoCuenta tipo) {
         this.tipo = tipo;
     }
 
@@ -63,12 +83,8 @@ public class Movimiento {
         this.monto = monto;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Instant fecha) {
         this.fecha = fecha;
-    }
-
-    public void setHora(String hora) {
-        this.hora = hora;
     }
 
     public void setConcepto(String concepto) {
