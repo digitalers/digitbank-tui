@@ -1,4 +1,7 @@
 package cuenta;
+
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class Cuenta {
@@ -17,7 +20,7 @@ public class Cuenta {
         this.tipo = tipo;
         this.saldo = saldo;
         this.moneda = moneda;
-        this.fechaApertura = fechaApertura;
+        this.fechaApertura = Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
         this.fechaVencimiento = fechaVencimiento;
     }
 
