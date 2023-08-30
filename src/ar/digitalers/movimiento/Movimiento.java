@@ -51,9 +51,18 @@ public class Movimiento {
 
     public void getHora() {
 
-        long days = (this.calculated / 86400);
-        long hours = ((this.calculated / 3600) % 24);
-        long minutes = ((this.calculated / 60) % 60);
+        // Se calcula los segundos transcurrido desde el 1970 y se resta por el tiempo almacenado en la variable; 
+        long seconds = Instant.now().getEpochSecond();
+        long calculated = (seconds - this.calculated);
+
+        // Un día equivale a 86400 segundos
+        long days = (calculated / 86400);
+
+        // Una hora equivale a 3600 segundos % 24 días
+        long hours = ((calculated / 3600) % 24);
+
+        // Un minuto equivale a 60 segundos % 60
+        long minutes = ((calculated / 60) % 60);
 
         System.out.println();
         System.out.printf("El movimiento se hizo hace %d día(s), %d hora(s) y %d minuto(s)", days, hours, minutes);
