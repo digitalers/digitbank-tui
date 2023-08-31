@@ -1,18 +1,16 @@
-package ar.digitalers;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.UUID;
 
-import ar.digitalers.CreditCard.CreditCard;
-import ar.digitalers.RandomNum.RandomNum;
+import tarjetaCredito.TarjetaCredito;
+import util.RandomNum;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<CreditCard> list = new ArrayList<CreditCard>();
-        CreditCard creditCard = new CreditCard();
+        ArrayList<TarjetaCredito> list = new ArrayList<TarjetaCredito>();
+        TarjetaCredito creditCard = new TarjetaCredito();
 
         // Genera un ID random
         UUID rand = UUID.randomUUID(); 
@@ -57,7 +55,7 @@ public class Main {
 
 
         // Recorremos el array de lista para obtener todos los datos de la / las tarjetas de créditos
-        for (CreditCard items: list) {
+        for (TarjetaCredito items: list) {
             System.out.printf("TARJETA DE CRÉDITO\n\n* ID de la cuenta bancaria: %s\n* ID de la tarjeta: %s\n* Expira: %s\n* Máximo de retiro: $%d",
                 items.getCuentabancariaID(),
                 items.getCodigo(),

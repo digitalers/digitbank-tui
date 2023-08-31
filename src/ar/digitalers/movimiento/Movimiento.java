@@ -1,9 +1,8 @@
 package movimiento;
 
 import java.time.Instant;
-import java.util.Date;
-import java.util.UUID;
 
+import enumerados.TipoCuenta;
 import movimiento.Exceptions.Exceptions;
 
 /* id, tipo, monto, fecha, hora, concepto, cuenta origen, cuenta destino */

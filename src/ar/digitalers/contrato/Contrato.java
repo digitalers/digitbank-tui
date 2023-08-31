@@ -2,6 +2,9 @@ package contrato;
 
 import java.util.Date;
 
+import cliente.Cliente;
+import producto.Producto;
+
 public class Contrato{
 
     private Long id;
