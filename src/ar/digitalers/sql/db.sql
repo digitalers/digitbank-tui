@@ -1,5 +1,7 @@
 USE digitBank;
 
+CREATE DATABASE IF NOT EXISTS digitBank;
+
 CREATE TABLE IF NOT EXISTS cliente (
     id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nombre varchar(72) NOT NULL,
